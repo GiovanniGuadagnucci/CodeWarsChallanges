@@ -1,0 +1,7 @@
+def longest(s1, s2):
+    soma = sorted(s1 + s2)
+    result = ''
+    for letra in soma:
+        if letra not in result:
+            result += letra
+    return result
