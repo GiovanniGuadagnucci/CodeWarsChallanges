@@ -1,0 +1,6 @@
+def number(bus_stops):
+    passagers = 0
+    for stop in bus_stops:
+        passagers = passagers + (stop[0] - stop[1])
+        print(passagers)
+    return passagers
