@@ -1,0 +1,14 @@
+import re
+def order(sentence):
+    temp = sentence.split()
+    resultado = {1:None,2:None,3:None,4:None,5:None,6:None,7:None,8:None,9:None}
+    nstring = ''
+    for palavra in temp:
+        teste = (re.findall("\d", palavra))
+        index = int(teste[0])
+        resultado[index] = palavra
+    for k, v in resultado.items():
+        if v != None:
+            nstring += v + ' '
+    print(nstring)
+    return nstring.strip()
