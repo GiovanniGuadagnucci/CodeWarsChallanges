@@ -1,0 +1,8 @@
+def split_the_bill(x):
+    valor = sum(x.values())/len(x)
+    dict = {}
+    for key in x:
+        resultado = x[key] - valor
+        dict[key] = round(resultado,2)
+    print(dict)
+    return dict
