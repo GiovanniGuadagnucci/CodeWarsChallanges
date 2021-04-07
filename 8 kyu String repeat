@@ -1,0 +1,4 @@
+def repeat_str(repeat, string):
+    ns = repeat * string
+    print(ns)
+    return ns
