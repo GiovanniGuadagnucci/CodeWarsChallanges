@@ -1,0 +1,6 @@
+def is_square(n):
+    number = (n**(1/2))
+    if n >= 0:
+        return number.is_integer()
+    else:
+        return False
