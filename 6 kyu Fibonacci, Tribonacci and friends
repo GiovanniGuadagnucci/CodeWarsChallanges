@@ -1,0 +1,16 @@
+def Xbonacci(signature,n):
+    #saber quantos elementos tem na signature
+        # qual é o meu xbonacci
+    #somo todos os elementos até o limite do n
+    # x = soma dos ultimos elementos = xbonacci
+    xbonacci = len(signature)
+    i = xbonacci + 1
+    resp = signature
+    
+    if xbonacci > n: 
+        return resp[:n]
+    else:
+        while i <= n:
+            i += 1
+            resp.append(sum(resp[-xbonacci:])) 
+        return resp     
