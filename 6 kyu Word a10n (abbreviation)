@@ -1,0 +1,20 @@
+#usar regex para facilitar o split em uma lista
+# contar quantidade de cada palavra na lista e determinar se vai ser modificada ou nao
+# retornar a uma string ?
+# Forma mais simples é splitar tudo que nao é alpha preservando sua posição 
+
+import re
+
+def abbreviate(s):
+    resp = ''
+    n = re.split("([^a-zA-Z])", s)
+    print(n)
+    
+    for w in n:
+        if len(w) > 3:
+            w = (w[0]+str(len(w)-2)+w[-1])
+            resp += w
+        else:
+            resp += w          
+    print(resp)
+    return resp 
