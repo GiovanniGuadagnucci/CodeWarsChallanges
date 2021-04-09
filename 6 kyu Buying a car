@@ -1,0 +1,27 @@
+def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
+    #Calular a depreciação mensal de cada carro individualmente.
+    # aumentar o valor da % a cada 2 meses e aumentar o valor salvo mensal
+    # determinar mensalmente a diferenca entre os (dois carros já depreciados) menos (o valor salvo)
+    # meu cógido ficou bem confuso tentar outra vez 
+    
+    months = 0
+    saved = 0 
+    old = startPriceOld
+    new = startPriceNew
+    depre = percentLossByMonth
+    resp  = (new - old)-saved
+    
+    if old >=  new:
+        resp = old-new
+        return [months, resp]
+    else:        
+        while resp > 0:
+            months += 1
+            if ((months%2) == 0) & (months != 0):
+                depre += 0.5
+            saved += savingperMonth
+            old -= old*(depre/100)
+            new -= new*(depre/100)
+            resp  = round((new - old)-saved)  
+            
+        return [months, abs(resp)]
